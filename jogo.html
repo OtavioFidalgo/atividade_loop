@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jopgo de Adivinhação</title>
+</head>
+<body>
+    <h1>Jogo de adivinhação</h1>
+    <p>Numero escolhido pelo primeiro Jogador: <span id="neppj"></span></p>
+    <p>Numero de tentativas: <span id="ndt"></span></p>
+    <script>
+ 
+    let numeroEscolhido = Number(prompt("Jogador 1, escolha um número entre 1 e 10:"));
+    let tentativas = 0
+    let numeroChutado
+    let mensagem
+ 
+    while (true) {
+        numeroChutado = Number(prompt("Jogador 2, chute um número entre 1 e 10:"));
+        tentativas++;
+ 
+        if (numeroChutado == numeroEscolhido) {
+            mensagem = "Parabéns! Você acertou o número " + numeroEscolhido + " em " + tentativas + " tentativas.";
+            break;
+        } else if (numeroChutado < numeroEscolhido) {
+            mensagem = "Tente um número maior.";
+        } else {
+            mensagem = "Tente um número menor.";
+        }
+       
+        document.getElementById("neppj").innerText = numeroEscolhido
+        document.getElementById("ndt").innerText = tentativas
+}
+ 
+    </script>
+</body>
+</html>

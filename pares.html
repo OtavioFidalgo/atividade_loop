@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pares</title>
+</head>
+<body>
+    <h4>Imprima os númros pares de 1 oa número 100:</h4>
+    <p id="par"></p>
+
+
+    <script>
+
+        for (let par = 100; par >=1; par--) {
+            if (par%2 == 0)
+            document.getElementById("par").innerHTML += par + "<br>";
+        }
+
+    </script>
+    
+</body>
+</html>
